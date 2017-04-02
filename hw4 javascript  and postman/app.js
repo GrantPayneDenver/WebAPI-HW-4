@@ -40,11 +40,11 @@ app.get('/movies', function(req, res){
                 delete body.entities[x].modified;
     		}
             }
-				var newBody = {};
-	    		newBody.status = "200";
-				newBody.description = "GET for all movies worked";
-				newBody.movies = body.entities;
-            res.json(newBody);
+				var responseBody = {};
+	    		responseBody.status = "200";
+				responseBody.description = "GET for all movies worked";
+				responseBody.movies = body.entities;
+            res.json(responseBody);
     			}
 				});
 });
@@ -63,13 +63,13 @@ app.get('/movies/:name', function(req, res){
           if(body.error){
             res.status(400).json({"status" : "400", "description" : "Movie not found :( "});
           }else{
-			var newBody = {};
-			newBody.status = "200";
-			newBody.description = "GET for one movie worked!";
-			newBody.name = body.entities[0].name;
-			newBody.releaseDate = body.entities[0].releaseDate;
-			newBody.actors = body.entities[0].actors;
-			res.json(newBody);
+			var responseBody = {};
+			responseBody.status = "200";
+			responseBody.description = "GET for one movie worked!";
+			responseBody.name = body.entities[0].name;
+			responseBody.releaseDate = body.entities[0].releaseDate;
+			responseBody.actors = body.entities[0].actors;
+			res.json(responseBody);
 					}
         }
       });
@@ -95,13 +95,13 @@ app.post('/movies', jsonParser, function(req, res){
 									 if (body.error){
 										 	res.status(400).json({"status" : "400", "description" : "duplicate movie error"});
 						 }else{
-						 	var newBody = {};
-	    					newBody.status = "200";
-							newBody.description = "Successfully POSTed a movie";
-							newBody.name = body.entities[0].name;
-							newBody.releaseDate = body.entities[0].releaseDate;
-							newBody.actors = body.entities[0].actors;
-							res.json(newBody);
+						 	var responseBody = {};
+	    					responseBody.status = "200";
+							responseBody.description = "Successfully POSTed a movie";
+							responseBody.name = body.entities[0].name;
+							responseBody.releaseDate = body.entities[0].releaseDate;
+							responseBody.actors = body.entities[0].actors;
+							res.json(responseBody);
 									 }
 	    			     } 
 					});
