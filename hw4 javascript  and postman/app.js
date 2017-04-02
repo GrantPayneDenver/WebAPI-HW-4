@@ -32,6 +32,7 @@ app.get('/movies', function(req, res){
 			if(body.error){
 			res.status(400).json(body)
 			}else{
+				// get rid of metadata that APIGEE puts in
         	for (var i = 0 ; i < body.entities.length ; i++){
                 delete body.entities[i].uuid;
                 delete body.entities[i].type;
