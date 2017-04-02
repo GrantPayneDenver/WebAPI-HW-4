@@ -1,0 +1,146 @@
+{
+	"id": "fe253dd4-2e8f-e861-c580-a49c34760449",
+	"name": "HW4",
+	"description": "",
+	"order": [
+		"a82a5c97-6caa-cdf4-af96-624bd3d6612f",
+		"f3315d37-53f8-3920-a594-1e64a976cb79",
+		"ff308a66-d21d-7787-7f70-a313955ae2b7",
+		"8404d9cb-b66d-f589-ca4d-dbeabf9fd3a3",
+		"a176cc5d-ad78-4167-00bd-68ec91efa611"
+	],
+	"folders": [],
+	"timestamp": 1491102010449,
+	"owner": "1485967",
+	"public": false,
+	"requests": [
+		{
+			"id": "8404d9cb-b66d-f589-ca4d-dbeabf9fd3a3",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://granters-test.apigee.net/HW4/movies",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "fe253dd4-2e8f-e861-c580-a49c34760449",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://granters-test.apigee.net/HW4",
+			"description": "Using Post, getting duplicate movie error",
+			"descriptionFormat": "html",
+			"time": 1491110919659,
+			"version": 2,
+			"responses": [],
+			"tests": "\nvar jsonData = JSON.parse(responseBody)\n\npostman.setEnvironmentVariable(\"token\", jsonData.access_token);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n  \"name\": \"Taxi Diver\",\n  \"releaseDate\": \"Feb-8-1976\",\n  \"actors\": [\n    \"Robert Dinero\",\n    \"Jodie Foster\",\n    \"Cybil Sheppard\"\n  ]\n\t\n}"
+		},
+		{
+			"id": "a176cc5d-ad78-4167-00bd-68ec91efa611",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://granters-test.apigee.net/HW4/movies",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "DELETE",
+			"collectionId": "fe253dd4-2e8f-e861-c580-a49c34760449",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://granters-test.apigee.net/HW4/movies",
+			"description": "Error when DELETE requesting upon all movies",
+			"descriptionFormat": "html",
+			"time": 1491111111974,
+			"version": 2,
+			"responses": [],
+			"tests": "\nvar jsonData = JSON.parse(responseBody)\n\npostman.setEnvironmentVariable(\"token\", jsonData.access_token);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": ""
+		},
+		{
+			"id": "a82a5c97-6caa-cdf4-af96-624bd3d6612f",
+			"headers": "",
+			"url": "https://apibaas-trial.apigee.net/granters/sandbox/movies",
+			"preRequestScript": null,
+			"pathVariables": {},
+			"method": "GET",
+			"data": [
+				{
+					"key": "client_id",
+					"value": "toiwjONXR2UZ1iAQs17QPMp6ioGJOnAF",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_secret",
+					"value": "SNuhQ7GAQIsGWzMK",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"version": 2,
+			"tests": "\nvar jsonData = JSON.parse(responseBody)\n\npostman.setEnvironmentVariable(\"token\", jsonData.access_token);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"time": 1491110292582,
+			"name": "http://granters-test.apigee.net/HW4",
+			"description": "Getting first Oauth Token with my product's client id and secret",
+			"collectionId": "fe253dd4-2e8f-e861-c580-a49c34760449",
+			"responses": []
+		},
+		{
+			"id": "f3315d37-53f8-3920-a594-1e64a976cb79",
+			"headers": "Content-Type: application/json\n",
+			"url": "http://granters-test.apigee.net/HW4/movies",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "POST",
+			"collectionId": "fe253dd4-2e8f-e861-c580-a49c34760449",
+			"data": [],
+			"dataMode": "raw",
+			"name": "http://granters-test.apigee.net/HW4",
+			"description": "Using Post, posting to my movie database",
+			"descriptionFormat": "html",
+			"time": 1491110206359,
+			"version": 2,
+			"responses": [],
+			"tests": "\nvar jsonData = JSON.parse(responseBody)\n\npostman.setEnvironmentVariable(\"token\", jsonData.access_token);",
+			"currentHelper": "normal",
+			"helperAttributes": {},
+			"rawModeData": "{\n  \"name\": \"Taxi Diver\",\n  \"releaseDate\": \"Feb-8-1976\",\n  \"actors\": [\n    \"Robert Dinero\",\n    \"Jodie Foster\",\n    \"Cybil Sheppard\"\n  ]\n\t\n}"
+		},
+		{
+			"id": "ff308a66-d21d-7787-7f70-a313955ae2b7",
+			"headers": "",
+			"url": "https://apibaas-trial.apigee.net/granters/sandbox/movies/Training Day",
+			"pathVariables": {},
+			"preRequestScript": null,
+			"method": "GET",
+			"collectionId": "fe253dd4-2e8f-e861-c580-a49c34760449",
+			"data": [
+				{
+					"key": "client_id",
+					"value": "toiwjONXR2UZ1iAQs17QPMp6ioGJOnAF",
+					"type": "text",
+					"enabled": true
+				},
+				{
+					"key": "client_secret",
+					"value": "SNuhQ7GAQIsGWzMK",
+					"type": "text",
+					"enabled": true
+				}
+			],
+			"dataMode": "urlencoded",
+			"name": "http://granters-test.apigee.net/HW4/Training Day",
+			"description": "Getting a specific movie from BaaS",
+			"descriptionFormat": "html",
+			"time": 1491110277687,
+			"version": 2,
+			"responses": [],
+			"tests": "\nvar jsonData = JSON.parse(responseBody)\n\npostman.setEnvironmentVariable(\"token\", jsonData.access_token);",
+			"currentHelper": "normal",
+			"helperAttributes": {}
+		}
+	]
+}
