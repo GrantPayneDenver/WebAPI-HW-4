@@ -32,12 +32,12 @@ app.get('/movies', function(req, res){
 			if(body.error){
 			res.status(400).json(body)
 			}else{
-        	for (var x = 0 ; x < body.entities.length ; x++){
-                delete body.entities[x].uuid;
-                delete body.entities[x].type;
-                delete body.entities[x].metadata;
-                delete body.entities[x].created;
-                delete body.entities[x].modified;
+        	for (var i = 0 ; i < body.entities.length ; i++){
+                delete body.entities[i].uuid;
+                delete body.entities[i].type;
+                delete body.entities[i].metadata;
+                delete body.entities[i].created;
+                delete body.entities[i].modified;
     		}
             }
 				var responseBody = {};
